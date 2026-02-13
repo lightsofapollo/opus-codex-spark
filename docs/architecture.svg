@@ -1,0 +1,134 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 960 540" fill="none">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="960" y2="540" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#0a0a0f"/>
+      <stop offset="100%" stop-color="#12121f"/>
+    </linearGradient>
+    <linearGradient id="opus-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#c084fc"/>
+      <stop offset="100%" stop-color="#7c3aed"/>
+    </linearGradient>
+    <linearGradient id="spark-glow" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#22d3ee"/>
+      <stop offset="100%" stop-color="#0891b2"/>
+    </linearGradient>
+    <linearGradient id="line-grad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#7c3aed" stop-opacity="0.9"/>
+      <stop offset="100%" stop-color="#0891b2" stop-opacity="0.9"/>
+    </linearGradient>
+    <filter id="glow-purple" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="glow-cyan" x="-50%" y="-50%" width="200%" height="200%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="soft-shadow">
+      <feDropShadow dx="0" dy="2" stdDeviation="4" flood-color="#000" flood-opacity="0.5"/>
+    </filter>
+  </defs>
+
+  <!-- Background -->
+  <rect width="960" height="540" fill="url(#bg)"/>
+
+  <!-- Subtle grid -->
+  <g stroke="#ffffff" stroke-opacity="0.03" stroke-width="1">
+    <line x1="0" y1="90" x2="960" y2="90"/>
+    <line x1="0" y1="180" x2="960" y2="180"/>
+    <line x1="0" y1="270" x2="960" y2="270"/>
+    <line x1="0" y1="360" x2="960" y2="360"/>
+    <line x1="0" y1="450" x2="960" y2="450"/>
+    <line x1="160" y1="0" x2="160" y2="540"/>
+    <line x1="320" y1="0" x2="320" y2="540"/>
+    <line x1="480" y1="0" x2="480" y2="540"/>
+    <line x1="640" y1="0" x2="640" y2="540"/>
+    <line x1="800" y1="0" x2="800" y2="540"/>
+  </g>
+
+  <!-- Title -->
+  <text x="480" y="52" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#a78bfa" letter-spacing="3">OPENCODE.AI</text>
+  <text x="480" y="82" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#64748b" letter-spacing="1.5">MULTI-MODEL ORCHESTRATION</text>
+
+  <!-- Connection lines (behind nodes) -->
+  <g stroke="url(#line-grad)" stroke-width="2" stroke-dasharray="6 4" opacity="0.6">
+    <!-- Opus to Spark nodes -->
+    <line x1="480" y1="220" x2="160" y2="360"/>
+    <line x1="480" y1="220" x2="400" y2="360"/>
+    <line x1="480" y1="220" x2="560" y2="360"/>
+    <line x1="480" y1="220" x2="800" y2="360"/>
+  </g>
+
+  <!-- Animated pulse dots on lines -->
+  <g fill="#a78bfa" opacity="0.8">
+    <circle r="3">
+      <animateMotion dur="2s" repeatCount="indefinite" path="M480,220 L160,360"/>
+    </circle>
+    <circle r="3">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="0.5s" path="M480,220 L400,360"/>
+    </circle>
+    <circle r="3">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="1s" path="M480,220 L560,360"/>
+    </circle>
+    <circle r="3">
+      <animateMotion dur="2s" repeatCount="indefinite" begin="1.5s" path="M480,220 L800,360"/>
+    </circle>
+  </g>
+
+  <!-- Orchestrator node: Opus 4.6 -->
+  <g filter="glow-purple" transform="translate(480, 170)">
+    <rect x="-120" y="-40" width="240" height="80" rx="12" fill="#1a1028" stroke="#7c3aed" stroke-width="2"/>
+    <rect x="-120" y="-40" width="240" height="80" rx="12" fill="url(#opus-glow)" opacity="0.08"/>
+    <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#e9d5ff">Claude Opus 4.6</text>
+    <text x="0" y="16" text-anchor="middle" font-family="ui-monospace, monospace" font-size="11" fill="#a78bfa">orchestrator</text>
+  </g>
+
+  <!-- Sub-agent nodes: Codex Spark -->
+  <g filter="glow-cyan">
+    <!-- Node 1: general -->
+    <g transform="translate(160, 380)">
+      <rect x="-90" y="-30" width="180" height="60" rx="10" fill="#0a1a1f" stroke="#0891b2" stroke-width="1.5"/>
+      <rect x="-90" y="-30" width="180" height="60" rx="10" fill="url(#spark-glow)" opacity="0.06"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#cffafe">Codex 5.3 Spark</text>
+      <text x="0" y="16" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#22d3ee">general agent</text>
+    </g>
+
+    <!-- Node 2: explore -->
+    <g transform="translate(400, 380)">
+      <rect x="-90" y="-30" width="180" height="60" rx="10" fill="#0a1a1f" stroke="#0891b2" stroke-width="1.5"/>
+      <rect x="-90" y="-30" width="180" height="60" rx="10" fill="url(#spark-glow)" opacity="0.06"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#cffafe">Codex 5.3 Spark</text>
+      <text x="0" y="16" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#22d3ee">explore agent</text>
+    </g>
+
+    <!-- Node 3: task -->
+    <g transform="translate(560, 380)">
+      <rect x="-90" y="-30" width="180" height="60" rx="10" fill="#0a1a1f" stroke="#0891b2" stroke-width="1.5"/>
+      <rect x="-90" y="-30" width="180" height="60" rx="10" fill="url(#spark-glow)" opacity="0.06"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#cffafe">Codex 5.3 Spark</text>
+      <text x="0" y="16" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#22d3ee">task agent</text>
+    </g>
+
+    <!-- Node 4: additional -->
+    <g transform="translate(800, 380)">
+      <rect x="-90" y="-30" width="180" height="60" rx="10" fill="#0a1a1f" stroke="#0891b2" stroke-width="1.5"/>
+      <rect x="-90" y="-30" width="180" height="60" rx="10" fill="url(#spark-glow)" opacity="0.06"/>
+      <text x="0" y="-4" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="600" fill="#cffafe">Codex 5.3 Spark</text>
+      <text x="0" y="16" text-anchor="middle" font-family="ui-monospace, monospace" font-size="10" fill="#22d3ee">... more agents</text>
+    </g>
+  </g>
+
+  <!-- Labels -->
+  <g font-family="ui-monospace, monospace" font-size="10" fill="#475569">
+    <text x="480" y="128" text-anchor="middle">reasoning &middot; planning &middot; coordination</text>
+    <text x="480" y="450" text-anchor="middle">fast execution &middot; focused tasks &middot; parallel work</text>
+  </g>
+
+  <!-- Arrow indicators -->
+  <g fill="#7c3aed" opacity="0.5">
+    <polygon points="480,240 474,232 486,232"/>
+  </g>
+
+  <!-- Footer -->
+  <text x="480" y="510" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#334155">opus-codex-spark &middot; opencode.ai template</text>
+</svg>

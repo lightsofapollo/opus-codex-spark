@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+.opencode/node_modules/
+
+# Agent/tool state
+.agents/
+.claude/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Build output
+dist/
+
+# Test artifacts (not part of the template)
+src/
+index.html
