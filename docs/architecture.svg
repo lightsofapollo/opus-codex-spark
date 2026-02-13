@@ -76,7 +76,7 @@
   </g>
 
   <!-- Orchestrator node: Opus 4.6 -->
-  <g filter="glow-purple" transform="translate(480, 170)">
+  <g filter="url(#glow-purple)" transform="translate(480, 170)">
     <rect x="-120" y="-40" width="240" height="80" rx="12" fill="#1a1028" stroke="#7c3aed" stroke-width="2"/>
     <rect x="-120" y="-40" width="240" height="80" rx="12" fill="url(#opus-glow)" opacity="0.08"/>
     <text x="0" y="-8" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="700" fill="#e9d5ff">Claude Opus 4.6</text>
@@ -84,7 +84,7 @@
   </g>
 
   <!-- Sub-agent nodes: Codex Spark -->
-  <g filter="glow-cyan">
+  <g filter="url(#glow-cyan)">
     <!-- Node 1: general -->
     <g transform="translate(160, 380)">
       <rect x="-90" y="-30" width="180" height="60" rx="10" fill="#0a1a1f" stroke="#0891b2" stroke-width="1.5"/>
@@ -120,8 +120,8 @@
 
   <!-- Labels -->
   <g font-family="ui-monospace, monospace" font-size="10" fill="#475569">
-    <text x="480" y="128" text-anchor="middle">reasoning &middot; planning &middot; coordination</text>
-    <text x="480" y="450" text-anchor="middle">fast execution &middot; focused tasks &middot; parallel work</text>
+    <text x="480" y="128" text-anchor="middle">reasoning · planning · coordination</text>
+    <text x="480" y="450" text-anchor="middle">fast execution · focused tasks · parallel work</text>
   </g>
 
   <!-- Arrow indicators -->
@@ -130,5 +130,5 @@
   </g>
 
   <!-- Footer -->
-  <text x="480" y="510" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#334155">opus-codex-spark &middot; opencode.ai template</text>
+  <text x="480" y="510" text-anchor="middle" font-family="system-ui, -apple-system, sans-serif" font-size="11" fill="#334155">opus-codex-spark · opencode.ai template</text>
 </svg>
